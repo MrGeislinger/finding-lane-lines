@@ -13,7 +13,7 @@ In this project you will detect lane lines in images using Python and OpenCV. Op
 
 
 
-Instructions
+Instructions for Basic Lane Finding
 ---
 
 **Step 0:** Install relevant packages (OpenCV2, Numpy, matplotlib, Jupyter)
@@ -22,6 +22,6 @@ Instructions
 or [test_videos](test_videos/) respectively
 
 **Step 2:** To run the notebook's code, run `jupyter notebook` in a terminal window.
-Then you can open [finding_lanes.ipynb](finding_lanes.ipynb) using Jupyter and run code cells
+Then you can open [finding_lanes-basic.ipynb](finding_lanes-basic.ipynb) using Jupyter and run code cells
 
 **Step 3:** Check the output folders ([test_images_output](test_images_output/) & [test_videos_output](test_videos_output/)) for annotated images with lane guides
