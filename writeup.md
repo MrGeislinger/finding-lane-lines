@@ -1,56 +1,51 @@
-# **Finding Lane Lines on the Road** 
+# Finding Lane Lines on the Road
 
-## Reflection
+## Overview
 
-### Pipeline Description
+In this project, we wanted to define the lane that the driving car should stay in. This involved defining a pipeline that could take an image of the road from a car-mounted camera and ultimately annotate the image for the car to remain within the lane. We also added additional information for the car to use such as calculating the radius of curvature of the lane.
 
-My pipeline to find lane lines consisted of a few steps. First, I used OpenCV to 
-find the elements that were in a specified color range of yellow or white. Next,
-I took this image and applied a Gaussian blur to help with the next step, edge 
-detecting. For edge detecting, a lower & upper threshold are given to perform 
-the Canny edge detection algorithm. This gives a good start on creating edges so
-the next step was to create the lane lines.
-
-First, I created an area of interest (trapezoid) that looked like it would 
-contain the lane lines in the image. This was based on the sample images and 
-where other cars in the sample images/videos were located. Next, Hough lines 
-were found after playing with the parameters that gave reasonable results. 
-Lastly, to create the lane line guides, the Hough lines were split into 
-negative-sloped lines, positive sloped-lines, and lines outside of a given 
-threshold. Only the negative and positive slope lines were used. The median 
-slope & point in x (at the bottom of the image) was then found for each lane. 
-These were then used to extrapolate and drawn in blue with the `draw_lines()`
-function.
-
-These steps produce an image with just lane line guides, so we then combine this
-image with the original image so that it looks something like this below:
-
-![](test_images_output/solidYellowCurve-after.jpg)
+![Annotated image of road via the pipeline](images/example-lane_lines_complete.png)
 
 
-
-###  Shortcomings
-
-The pipeline has some issues when there are sudden changes in color in the image
-such as shadows or abrupt changes in asphalt color. This clearest in the 
-_challenge.mp4_ video stream.
-
-The pipeline has some issues when lane segments (broken lines) are far away.
-This is due to the Hough line parameters restricting the size (minimum line 
-length and maximum line gap). So the pipeline won't be able to detect these 
-lines well until they're nearer to the vehicle (camera).
+# Pipeline Parts
 
 
-### Improvements
+## Pipeline Results: Video
 
-The pipeline definitely has room for improvement. For one, more parameter tuning
-on the Canny algorithm and Hough lines could improve the edge detection. This
-can be a very time consuming process especially when trying to expand the 
-results to be more general.
 
-Another very clear potential improvement to the pipeline would be to extrapolate
-between frames in a video stream. Each frame is treated as an independent image
-and it obviously has a difficult time if one or more frames are difficult in
-lane detection. One solution would be to use a rolling average of previous 
-lane guides. This would help prevent lane guides jumping around or suddenly 
-disapperaing in a video stream output.
+## Camera Calibration (Distortion Correction)
+
+![Checkerboard comparison of distortion correction](images/example-distortion_correction.png)
+
+
+## Color Transforms
+
+![Several binary images after transform](images/example-binary_images.png)
+
+
+## Perspective Transform
+
+![Undistorted image with annotated lines of expected lane lines](images/example-perspective_transform-undistorted.png)
+![Distorted "bird's eye" view of the previous image](images/example-perspective_transform-warped.png)
+
+
+## Lane Line Pixels Identified with a Curved Functional Form
+
+![Pair of images showing the lane line pixels being identified](images/example-rectified_lane_lines.png)
+
+
+## Radius of Curvature Calculations
+
+![Top left shows curvature calculations](images/example-radius_of_curvature.png)
+
+
+
+# Discussion
+
+## Challenges Faced
+
+## Improvements
+(TODO:)
+- Where it fails
+- Where it could fail
+- Improvements to pipeline
