@@ -63,8 +63,10 @@ As can be seen in the next section of the notebook [finding_lanes-advanced.ipynb
 
 ## Challenges Faced
 
+A big issue that took a lot of fine-tuning was when the color and shading of the road changed. A big fix for this was just finding the write parameters in creating the binary image. This shows how much effort can be put in to get decent results that define different parts of the road without being so sensitive to find artifacts that aren't relevant in finding the lane lines.
+
 ## Improvements
-(TODO:)
-- Where it fails
-- Where it could fail
-- Improvements to pipeline
+
+As mentioned, the pipeline can have difficulty when the image contains varying shading. In the video linked to earlier in this doc, there are few instances where the shading changes. But this could be more difficult in situations where color is not consistent.
+
+We can also improve the pipeline but using previous results to either speed up or even overwrite the current result of the pipeline. Since a frame of a video was processed each time, a sudden change in the road's shading can result in a poor estimation of the lane lines. But since each frame is correlated with the previous frame, considering the previous frame(s) could help average out sudden and drastic errors thus improving accuracy.
