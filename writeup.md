@@ -17,10 +17,11 @@ In this project, we wanted to define the lane that the driving car should stay i
 
 Relevant code to define the camera matrix can be found in thi notebook's section [finding_lanes-advanced.ipynb#Camera-Calibration](finding_lanes-advanced.ipynb#Camera-Calibration) and then applied in the pipeline with the function `undistort_image()` (found in this section [finding_lanes-advanced.ipynb#Undistort](finding_lanes-advanced.ipynb#Undistort)).
 
-Below we use the camera matrix and distortion coefficients to transform the image into what we would expect the image to look like.
+Below we use the camera matrix and distortion coefficients to transform the image into what we would expect the image to look like:
 
 ![Checkerboard comparison of distortion correction](images/example-distortion_correction.png)
 
+We did this by first finding the camera matrix by assuming first that the chessboard image is fixed in the third dimension (z=0) so that the object points (corners of the squares within the grid) are the same for each chessboard calibration image. We then used the method from OpenCV `findChessboardCorners()` to find the corners of the board to create image points. Using OpenCV's `calibrateCamera()` method to find the camera calibration and distortion coefficients, we were then able to undistort images from the same camera via another OpenCV method `undistort()`.
 
 ## Color Transforms
 
