@@ -54,8 +54,9 @@ As the code in the notebook's section [finding_lanes-advanced.ipynb#Identify-Lan
 
 ## Radius of Curvature Calculations
 
-![Top left shows curvature calculations](images/example-radius_of_curvature.png)
+As can be seen in the next section of the notebook [finding_lanes-advanced.ipynb#Radius-of-Curvature-of-Lane-&-Position-of-Vehicle-w.r.t.-Center](finding_lanes-advanced.ipynb#Radius-of-Curvature-of-Lane-&-Position-of-Vehicle-w.r.t.-Center), we use the previous results of estimating the lane lines with a 2nd order polynomial to calculate the curvature of the lane. We assumed the camera sits at the center of the image. The pixel measurements were then converted to meters by knowing the approximate measurement values for the width of lanes and the space between lane line guides. We then superimposed this information onto the output image as shown below:
 
+![Top left shows curvature calculations](images/example-radius_of_curvature.png)
 
 
 # Discussion
