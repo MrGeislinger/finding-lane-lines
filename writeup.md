@@ -29,6 +29,11 @@ This process was then part of the pipeline to undistort the images. A few sample
 
 ## Color Transforms
 
+We used a combination of applications of the OpenCV `Sobel()` method to get different attributes of the image gradient (each with its own tuned threshold and parameters.) This included calculating the absolute value of the x & y components of the gradient (`abs_sobel_thresh()`), the gradient magnitude (`mag_thresh()`), and the gradient direction (`dir_threshold()`).
+
+These methods were tuned and combined together in the `full_binary_image()` method to produce images like the ones below:
+
+
 ![Several binary images after transform](images/example-binary_images.png)
 
 
