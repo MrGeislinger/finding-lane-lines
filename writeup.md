@@ -23,6 +23,10 @@ Below we use the camera matrix and distortion coefficients to transform the imag
 
 We did this by first finding the camera matrix by assuming first that the chessboard image is fixed in the third dimension (z=0) so that the object points (corners of the squares within the grid) are the same for each chessboard calibration image. We then used the method from OpenCV `findChessboardCorners()` to find the corners of the board to create image points. Using OpenCV's `calibrateCamera()` method to find the camera calibration and distortion coefficients, we were then able to undistort images from the same camera via another OpenCV method `undistort()`.
 
+This process was then part of the pipeline to undistort the images. A few sample images are shown below:
+
+![Grid of undistorted image](images/example-distortion_correction-test_images.png)
+
 ## Color Transforms
 
 ![Several binary images after transform](images/example-binary_images.png)
