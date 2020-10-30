@@ -15,7 +15,7 @@ In this project, we wanted to define the lane that the driving car should stay i
 
 ## Camera Calibration (Distortion Correction)
 
-Relevant code to define the camera matrix can be found in thi notebook's section [finding_lanes-advanced.ipynb#Camera-Calibration](finding_lanes-advanced.ipynb#Camera-Calibration) and then applied in the pipeline with the function `undistort_image()` (found in this section [finding_lanes-advanced.ipynb#Undistort](finding_lanes-advanced.ipynb#Undistort)).
+Relevant code to define the camera matrix can be found in this notebook's section [finding_lanes-advanced.ipynb#Camera-Calibration](finding_lanes-advanced.ipynb#Camera-Calibration) and then applied in the pipeline with the function `undistort_image()` (found in this section [finding_lanes-advanced.ipynb#Undistort](finding_lanes-advanced.ipynb#Undistort)).
 
 Below we use the camera matrix and distortion coefficients to transform the image into what we would expect the image to look like:
 
