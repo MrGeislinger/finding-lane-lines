@@ -2,12 +2,14 @@
 
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
-<img src="images/example-lane_lines.png" width="480" alt="Combined Image" />
-
 # Overview
 
 This project is a continuation of the basic lane finding project. To learn more about this project, please see [writeup.md](writeup.md)
 
+
+Below is a sample of finding lanes from a video source using advanced techniques:
+
+![](images/out_challenge.gif)
 
 ## Instructions for Advances Lane Finding
 
