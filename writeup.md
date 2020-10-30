@@ -39,6 +39,8 @@ These methods were tuned and combined together in the `full_binary_image()` meth
 
 ## Perspective Transform
 
+Relevant code that performed a perspective transformation (to a "bird's-eye view") can be see in this notebook's section [finding_lanes-advanced.ipynb#Perspective-Transform](finding_lanes-advanced.ipynb#Perspective-Transform). This was then incorporated into the overall pipeline. We defined a trapezoid that approximately aligns with lane lines from the road. We could then take these points to create a warp matrix which was then used to warp the image. Below are images before and after the transformation:
+
 ![Undistorted image with annotated lines of expected lane lines](images/example-perspective_transform-undistorted.png)
 ![Distorted "bird's eye" view of the previous image](images/example-perspective_transform-warped.png)
 
