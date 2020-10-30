@@ -11,7 +11,7 @@ In this project, we wanted to define the lane that the driving car should stay i
 
 ## Pipeline Results: Video
 
-Results of pipeline (video link: [https://github.com/MrGeislinger/finding-lane-lines/releases/download/v1.0.0/out_challenge.mp4](https://github.com/MrGeislinger/finding-lane-lines/releases/download/v2.0.0/out_challenge.mp4))
+Results of pipeline (video link: [https://github.com/MrGeislinger/finding-lane-lines/releases/download/v2.0.0/out_challenge.mp4](https://github.com/MrGeislinger/finding-lane-lines/releases/download/v2.0.0/out_challenge.mp4))
 
 ![](images/out_challenge.gif)
 
