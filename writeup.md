@@ -47,6 +47,8 @@ Relevant code that performed a perspective transformation (to a "bird's-eye view
 
 ## Lane Line Pixels Identified with a Curved Functional Form
 
+As the code in the notebook's section [finding_lanes-advanced.ipynb#Identify-Lane-Line-Pixels](finding_lanes-advanced.ipynb#Identify-Lane-Line-Pixels) shows, we use a 2nd order polynomial to estimate where the lane lines are after a perspective transformation. We start with using a sliding window to search for lane lines. Note we first use a histogram to find the initial guess for the first window and then using the results to define where to search next. We then took these results and visualized the estimation of the lane lines as shown in the image below (original image and perspective transformed image with annotated lane lines from the 2nd order polynomial estimation).
+
 ![Pair of images showing the lane line pixels being identified](images/example-rectified_lane_lines.png)
 
 
